@@ -45,7 +45,7 @@ if (!empty($metakeywords)) {
         <ul>
         <?php 
 		foreach($main_navigation as $nav_item): ?>
-		<li><a href="<?php echo eval("?>".$nav_item->url."");?>"><?php echo $nav_item->title;?></a></li>
+		<li><a href="<?php echo eval("?>".$nav_item->url."");?>" <?php if(!empty($nav_item->target)) { echo 'target="'.$nav_item->target.'"'; } ?>><?php echo $nav_item->title;?></a></li>
 		<?php endforeach;?>
         </ul>
         </div>
@@ -56,7 +56,7 @@ if (!empty($metakeywords)) {
     	<ul>
         <?php 
 		foreach($main_navigation as $nav_item): ?>
-		<li><a href="<?php echo eval("?>".$nav_item->url."");?>"><?php echo $nav_item->title;?></a></li>
+		<li><a href="<?php echo eval("?>".$nav_item->url."");?>" <?php if(!empty($nav_item->target)) { echo 'target="'.$nav_item->target.'"'; } ?>><?php echo $nav_item->title;?></a></li>
 		<?php endforeach;?>
         </ul>
     	</li>
