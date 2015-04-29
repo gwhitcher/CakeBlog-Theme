@@ -8,7 +8,7 @@ if(!empty($article->metakeywords)) {
 ?>
 <article>
 <?php 
-if(!empty($article['Article']['featured'])) {
+if(!empty($article->featured)) {
 	echo '<a href="'.Configure::read('BASE_URL').'/'.$article->id.'/'.$article->slug.'"><img class="featured" src="'.Configure::read('BASE_URL').'/img/articles/featured/'.$article->featured.'" title="'.$article->title.'" alt="'.$article->title.'"></a>';
 }
 ?>
