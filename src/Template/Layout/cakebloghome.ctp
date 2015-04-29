@@ -44,7 +44,7 @@ if (!empty($metakeywords)) {
         <div class="center_container">
         <ul>
         <?php 
-		foreach($navigation as $nav_item): ?>
+		foreach($main_navigation as $nav_item): ?>
 		<li><a href="<?php echo eval("?>".$nav_item->url."");?>"><?php echo $nav_item->title;?></a></li>
 		<?php endforeach;?>
         </ul>
@@ -55,7 +55,7 @@ if (!empty($metakeywords)) {
         <ul><li><a href="#">&equiv;</a>
     	<ul>
         <?php 
-		foreach($navigation as $nav_item): ?>
+		foreach($main_navigation as $nav_item): ?>
 		<li><a href="<?php echo eval("?>".$nav_item->url."");?>"><?php echo $nav_item->title;?></a></li>
 		<?php endforeach;?>
         </ul>
@@ -106,7 +106,7 @@ if (!empty($metakeywords)) {
         <aside id="sidebar">
         <div id="sidebar_padding">
         <?php 
-		foreach($sidebar as $sidebar_item):
+		foreach($main_sidebar as $sidebar_item):
 		echo '<div class="sidebar_item">';
 		echo '<h2>'.$sidebar_item->title.'</h2>';
 		echo eval("?>".$sidebar_item->body);
